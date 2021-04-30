@@ -5,6 +5,7 @@ const Menu = () => {
     return (
         <View>
             <Text>Screen Menu</Text>
+            <Text>Ando</Text>
         </View>
     )
 }
