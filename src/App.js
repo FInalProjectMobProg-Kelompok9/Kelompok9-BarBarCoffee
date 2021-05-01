@@ -5,7 +5,7 @@ import { HomeScreen, SplashScreen, MenuScreen } from './pages'
 const App = () => {
   return (
       //<SplashScreen/>
-      // <HomeScreen/>
+      //<HomeScreen/>
       <MenuScreen/>
   )
 }

@@ -1,11 +1,11 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, ImageBackground } from 'react-native'
 import { IconBack, Logo } from '../../assets';
-import { Button, TextInput } from '../../components';
+import { Button, TextInput, } from '../../components';
 
 const HomeScreen = () => {
     return (
-        <View style={styles.page}>
+        <ImageBackground source={require('../../assets/icons/haya.jpg')} style={styles.page}>
             <Logo style={styles.logo}/>
             <View style={styles.viewText}>
                 <Text style={styles.text1}>BarBar </Text>
@@ -13,7 +13,7 @@ const HomeScreen = () => {
             </View>
             <TextInput placeholder="Table Number"/>
             <Button title="Menu"/>
-        </View>
+        </ImageBackground>
     )
 }
 
