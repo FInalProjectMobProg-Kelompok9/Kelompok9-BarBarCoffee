@@ -1,9 +1,9 @@
 import React from 'react'
-import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native'
+import { StyleSheet, Text, View, ImageBackground, ScrollView, TouchableOpacity } from 'react-native'
 import { Background, Bakpao, Cappuccino, Cup, Espresoo, IconBack, KopiHitam, Logo, Mochaccino } from '../../assets';
 import { ArrowRight, Gap, Menu } from '../../components'
 
-const MenuScreen = () => {
+const MenuScreen = ({onPress}) => {
     return (
         <ImageBackground source={require('../../assets/icons/haya.jpg')} style={styles.page}>
             <ScrollView>
@@ -56,9 +56,11 @@ const MenuScreen = () => {
                     </View>
                 </View>
             </ScrollView>
-            <View style={styles.buttomView}>
-                <Cup/>
-            </View>
+            <TouchableOpacity onPress={onPress} activeOpacity={0.7}>
+                <View style={styles.buttomView}>
+                    <Cup/>
+                </View>
+            </TouchableOpacity>
         </ImageBackground>
     )
 }
