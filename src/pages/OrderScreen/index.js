@@ -1,72 +1,110 @@
 import React from 'react'
-import { ImageBackgroundComponent, StyleSheet, Text, View } from 'react-native'
+import { ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-native'
 import {KopiHitam, IconMin, IconPlus, Circle, PoinCircle, CupNo, CupYes, NoCubes, OneCubes, TwoCubes, ThreeCubes} from '../../assets';
-import { ArrowLeft, ButtonAdd } from '../../components/atoms';
+import {ButtonAdd, ArrowLeft, Gap} from '../../components';
 
 
 const OrderScreen = () => {
     return (
+
+        <ImageBackground source={require('../../assets/icons/haya.jpg')} style={styles.page}>
+        <ScrollView>
         <View>
+        <View style={styles.fullPage}>
             <ArrowLeft/>
-            <Text style={styles.textTittle}>Kopi Hitam</Text>
+            <View style={styles.viewTextKopiHitam}>
+                <Text style={styles.textTittle}>Kopi Hitam</Text>
+            </View>
+            <Gap height={39}/>
             <View style={styles.kopiHitam}>
                 <KopiHitam/>
             </View>
+            <Gap height={147}/>
             <View style={styles.totalCup}>
                 <Text style={styles.textSubtittle}>Kopi Hitam</Text>
+                <Gap width={110}/>
+                <IconPlus marginTop={8}/>
+                <Gap width={12}/>
+                <Text style={styles.counter}>1</Text>
+                <Gap width={12}/>
                 <IconMin/>
-                <IconPlus/>
             </View>
+            <Gap height={5}/>
             <View style={styles.textHarga}>
                 <Text style={styles.textRp}>Rp</Text>
                 <Text style={styles.textMoney}>10.000</Text>
             </View>
+            <Gap height={42}/>
             <View style={styles.hotCold}>
             <PoinCircle/>
+            <Gap width={20}/>
                 <Text style={styles.hot}>Hot</Text>
             </View>
+            <Gap height={10}/>
             <View style={styles.hotCold}>
                 <Circle/>
+                <Gap width={20}/>
                 <Text style={styles.hot}>Cold</Text>
             </View>
+            <Gap height={33}/>
             <View>
                 <Text style={styles.ziseTittle}>Zise</Text>
             </View>
+            <Gap height={5}/>
             <View style={styles.size}>
-                <CupYes/>
+                <CupYes marginTop={14}/>
+            <Gap width={22}/>
                 <CupNo/>
             </View>
+            <Gap height={45}/>
             <View style={styles.sugarRate}>
                 <Text style={styles.sugar}>Sugar</Text>
                 <Text style={styles.hot}>(In Cubes)</Text>
             </View>
+            <Gap height={5}/>
             <View style={styles.cubes}>
-               <NoCubes/>
-               <OneCubes/>
-               <TwoCubes/>
+               <NoCubes marginTop={18}/>
+               <Gap width={25}/>
+               <OneCubes marginTop={23}/>
+               <Gap width={25}/>
+               <TwoCubes marginTop={22}/>
+               <Gap width={25}/>
                <ThreeCubes/>
             </View>
-            
+            <Gap height={28}/>
             <ButtonAdd/>
         </View>
+        </View>
+        </ScrollView>
+        </ImageBackground>
     )
 }
 
 export default OrderScreen
 
 const styles = StyleSheet.create({
+    page:{
+        flex:1,
+    },
+    fullPage:{
+        marginHorizontal:24,
+        marginTop:24,
+        marginBottom:15,
+    },
+    viewTextKopiHitam:{
+        alignItems:'center',
+    },
     textTittle:{
         textAlign:'center',
-        width: 152,
-        height:134,
         fontSize:28,
     },
     kopiHitam:{
         alignItems: 'center',
     },
     textSubtittle:{
-        width:152,
-        height:34,
+        fontSize:28,
+    },
+    counter:{
         fontSize:28,
     },
     textRp:{
@@ -87,6 +125,7 @@ const styles = StyleSheet.create({
     },
     totalCup:{
         flexDirection:'row',
+        alignItems:'center',
 
     },
     hot:{
