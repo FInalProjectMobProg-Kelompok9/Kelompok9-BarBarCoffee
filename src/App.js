@@ -6,7 +6,7 @@ const App = () => {
   return (
       //<SplashScreen/>
       //<HomeScreen/>
-      // <MenuScreen/>
+      //<MenuScreen/>
       <OrderScreen/>
   )
 }

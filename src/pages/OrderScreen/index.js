@@ -15,11 +15,11 @@ const OrderScreen = () => {
             <View style={styles.viewTextKopiHitam}>
                 <Text style={styles.textTittle}>Kopi Hitam</Text>
             </View>
-            <Gap height={39}/>
+            <Gap height={40}/>
             <View style={styles.kopiHitam}>
                 <KopiHitam/>
             </View>
-            <Gap height={147}/>
+            <Gap height={40}/>
             <View style={styles.totalCup}>
                 <Text style={styles.textSubtittle}>Kopi Hitam</Text>
                 <Gap width={110}/>
@@ -48,7 +48,7 @@ const OrderScreen = () => {
             </View>
             <Gap height={33}/>
             <View>
-                <Text style={styles.ziseTittle}>Zise</Text>
+                <Text style={styles.ziseTittle}>Size</Text>
             </View>
             <Gap height={5}/>
             <View style={styles.size}>
@@ -59,7 +59,7 @@ const OrderScreen = () => {
             <Gap height={45}/>
             <View style={styles.sugarRate}>
                 <Text style={styles.sugar}>Sugar</Text>
-                <Text style={styles.hot}>(In Cubes)</Text>
+                <Text style={styles.hot}> (In Cubes)</Text>
             </View>
             <Gap height={5}/>
             <View style={styles.cubes}>
