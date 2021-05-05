@@ -3,7 +3,7 @@ import { ImageBackground, StyleSheet, Text, View } from 'react-native'
 import { IconDone } from '../../assets';
 import { ButtomHome, Gap } from '../../components';
 
-const OrderScreen = () => {
+const OrderScreen = ({navigation}) => {
     return (
         <ImageBackground source={require('../../assets/icons/haya.jpg')} style={styles.page}>
             <View>
@@ -25,7 +25,7 @@ const OrderScreen = () => {
                 </Text>
                 <Gap height={70}/>
                 <View style={styles.IconButtomView}>
-                    <ButtomHome/>
+                    <ButtomHome onPress={() => navigation.navigate('MenuScreen')}/>
                 </View>
             </View>
         </ImageBackground>

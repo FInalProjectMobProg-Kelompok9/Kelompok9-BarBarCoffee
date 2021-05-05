@@ -5,7 +5,7 @@ const ButtonAdd = ({title, onPress}) => {
     return (
         <TouchableOpacity onPress={onPress} activeOpacity={0.7}>
             <View style={styles.Button}>
-                <Text style={styles.text4}>Add to Chart</Text>
+                <Text style={styles.text4}>{title}</Text>
             </View>
         </TouchableOpacity>
     )

@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { HomeScreen, MenuScreen, OrderScreen, OrderScreen2, OrderScreen3, OrderScreen4, OrderScreen5, SplashScreen } from '../pages';
+import { ChartScreen, EndScreen, HomeScreen, MenuScreen, OrderScreen, OrderScreen2, OrderScreen3, OrderScreen4, OrderScreen5, SplashScreen } from '../pages';
 
 const Router = () => {
 
@@ -16,6 +16,8 @@ const Router = () => {
             <Stack.Screen name="OrderScreen3" component={OrderScreen3} options={{headerShown: false}}/>
             <Stack.Screen name="OrderScreen4" component={OrderScreen4} options={{headerShown: false}}/>
             <Stack.Screen name="OrderScreen5" component={OrderScreen5} options={{headerShown: false}}/>
+            <Stack.Screen name="ChartScreen" component={ChartScreen} options={{headerShown: false}}/>
+            <Stack.Screen name="EndScreen" component={EndScreen} options={{headerShown: false}}/>
         </Stack.Navigator>
     )
 }

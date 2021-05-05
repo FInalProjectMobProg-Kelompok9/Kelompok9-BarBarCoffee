@@ -56,7 +56,7 @@ const MenuScreen = ({navigation}) => {
                     </View>
                 </View>
             </ScrollView>
-            <ButtonToCart/>
+            <ButtonToCart onPress={() => navigation.navigate('ChartScreen')}/>
         </ImageBackground>
     )
 }
