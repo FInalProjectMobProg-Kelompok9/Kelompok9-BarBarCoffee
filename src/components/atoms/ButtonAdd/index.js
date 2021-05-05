@@ -1,11 +1,11 @@
 import React from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 
 const ButtonAdd = ({title, onPress}) => {
     return (
         <TouchableOpacity onPress={onPress} activeOpacity={0.7}>
             <View style={styles.Button}>
-                <Text style={styles.text4}>Add to Chart</Text>
+                <Text style={styles.text4}>{title}</Text>
             </View>
         </TouchableOpacity>
     )

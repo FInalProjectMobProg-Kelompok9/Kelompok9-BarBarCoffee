@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import { HomeScreen, SplashScreen, MenuScreen, OrderScreen, OrderScreen2, OrderScreen3, OrderScreen4, OrderScreen5, EndScreen } from './pages'
+import { HomeScreen, SplashScreen, MenuScreen, OrderScreen, OrderScreen2, OrderScreen3, OrderScreen4, OrderScreen5, ChartScreen ,EndScreen } from './pages'
 
 
 
@@ -9,11 +9,12 @@ const App = () => {
       //<SplashScreen/>
       //<HomeScreen/>
       //<MenuScreen/>
-      <OrderScreen/>
+      // <OrderScreen/>
       //<OrderScreen2/>
       //<OrderScreen3/>
       //<OrderScreen4/>
       //<OrderScreen5/>
+      <ChartScreen/>
       //<EndScreen/> 
 
   
