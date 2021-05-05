@@ -15,11 +15,13 @@ import NoCubes from './NoCubes.svg';
 import OneCubes from './OneCubes.svg';
 import TwoCubes from './TwoCubes.svg';
 import ThreeCubes from './ThreeCubes.svg';
-import IconBackLeft from './IconBackLeft.svg'
+import IconBackLeft from './IconBackLeft.svg';
 import Bakpao from './Bakpao.svg';
-import Cup from './Cup.svg'
+import Cup from './Cup.svg';
+import IconDone from './IconDone.svg';
+import IconButtomHome from './IconButtomHome.svg';
 
-export {Logo, Background, IconBack, Cappuccino, KopiHitam, Mochaccino, IconMin, IconPlus, Circle, PoinCircle, CupNo, CupYes,  NoCubes, OneCubes, TwoCubes, ThreeCubes, IconBackLeft, Bakpao, Cup, Espresoo};
+export {Logo, Background, IconBack, Cappuccino, KopiHitam, Mochaccino, IconMin, IconPlus, Circle, PoinCircle, CupNo, CupYes,  NoCubes, OneCubes, TwoCubes, ThreeCubes, IconBackLeft, Bakpao, Cup, Espresoo, IconDone, IconButtomHome};
 
 
 
