@@ -3,9 +3,10 @@ import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-nativ
 import {KopiHitam} from '../../assets';
 import { ArrowLeft, ButtonAdd, Gap } from '../../components';
 
-
 const ChartScreen = () => {
     return (
+
+        <ImageBackground source={require('../../assets/icons/haya.jpg')} style={styles.page}>
         <ScrollView>
         <View style={styles.fullPage}>
 
@@ -73,13 +74,17 @@ const ChartScreen = () => {
             <Gap height={10}/>
         </View> 
         </View>
-        </ScrollView>          
+        </ScrollView>
+        </ImageBackground>
     )
 }
 
 export default ChartScreen
 
 const styles = StyleSheet.create({
+    page:{
+        flex:1,
+    },
     fullPage:{
         marginHorizontal:24,
     },
@@ -148,4 +153,5 @@ const styles = StyleSheet.create({
     subTotalValue:{
         fontSize:24,
     },
+    
 })
