@@ -4,14 +4,14 @@ import {KopiHitam, IconMin, IconPlus, Circle, PoinCircle, CupNo, CupYes, NoCubes
 import {ButtonAdd, ArrowLeft, Gap} from '../../components';
 
 
-const OrderScreen4 = () => {
+const OrderScreen4 = ({navigation}) => {
     return (
 
         <ImageBackground source={require('../../assets/icons/haya.jpg')} style={styles.page}>
         <ScrollView>
         <View>
         <View style={styles.fullPage}>
-            <ArrowLeft/>
+            <ArrowLeft onPress={() => navigation.navigate('MenuScreen')}/>
             <View style={styles.viewTextKopiHitam}>
                 <Text style={styles.textTittle}>Mochaccino</Text>
             </View>

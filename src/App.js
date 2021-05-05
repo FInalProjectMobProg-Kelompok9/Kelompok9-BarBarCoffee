@@ -1,27 +1,15 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import { HomeScreen, SplashScreen, MenuScreen, OrderScreen, OrderScreen2, OrderScreen3, OrderScreen4, OrderScreen5, EndScreen } from './pages'
-
-
+import 'react-native-gesture-handler';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import Router from './router';
 
 const App = () => {
   return (
-      //<SplashScreen/>
-      //<HomeScreen/>
-      //<MenuScreen/>
-      <OrderScreen/>
-      //<OrderScreen2/>
-      //<OrderScreen3/>
-      //<OrderScreen4/>
-      //<OrderScreen5/>
-      //<EndScreen/> 
-
-  
-
-
+    <NavigationContainer>
+      <Router/>
+    </NavigationContainer>
   )
 }
 
 export default App
 
-const styles = StyleSheet.create({})

@@ -1,9 +1,9 @@
 import React from 'react'
-import { StyleSheet, Text, View, ImageBackground, ScrollView, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native'
 import { Background, Bakpao, Cappuccino, Cup, Espresoo, IconBack, KopiHitam, Logo, Mochaccino } from '../../assets';
-import { ArrowRight, Gap, Menu } from '../../components'
+import { ArrowRight, ButtonToCart, Gap, Menu } from '../../components'
 
-const MenuScreen = ({onPress}) => {
+const MenuScreen = ({navigation}) => {
     return (
         <ImageBackground source={require('../../assets/icons/haya.jpg')} style={styles.page}>
             <ScrollView>
@@ -20,7 +20,7 @@ const MenuScreen = ({onPress}) => {
                         <Gap width={25}/>
                         <Menu title = "Espresoo"/>
                         <Gap width={91}/>
-                        <ArrowRight/>
+                        <ArrowRight onPress={() => navigation.navigate('OrderScreen2')}/>
                     </View>
                     <Gap height={29}/>
                     <View style={styles.menuView}>
@@ -28,7 +28,7 @@ const MenuScreen = ({onPress}) => {
                         <Gap width={25}/>
                         <Menu title = "Capucciono"/>
                         <Gap width={58}/>
-                        <ArrowRight/>
+                        <ArrowRight onPress={() => navigation.navigate('OrderScreen3')}/>
                     </View>
                     <Gap height={29}/>
                     <View style={styles.menuView}>
@@ -36,7 +36,7 @@ const MenuScreen = ({onPress}) => {
                         <Gap width={55}/>
                         <Menu title = "Kopi Hitam"/>
                         <Gap width={66}/>
-                        <ArrowRight/>
+                        <ArrowRight onPress={() => navigation.navigate('OrderScreen')}/>
                     </View>
                     <Gap height={29}/>
                     <View style={styles.menuView}>
@@ -44,7 +44,7 @@ const MenuScreen = ({onPress}) => {
                         <Gap width={57}/>
                         <Menu title = "Mochaccino"/>
                         <Gap width={49}/>
-                        <ArrowRight/>
+                        <ArrowRight onPress={() => navigation.navigate('OrderScreen4')}/>
                     </View>
                     <Gap height={29}/>
                     <View style={styles.menuView}>
@@ -52,15 +52,11 @@ const MenuScreen = ({onPress}) => {
                         <Gap width={23}/>
                         <Menu title = "Bakpao"/>
                         <Gap width={104}/>
-                        <ArrowRight/>
+                        <ArrowRight onPress={() => navigation.navigate('OrderScreen5')}/>
                     </View>
                 </View>
             </ScrollView>
-            <TouchableOpacity onPress={onPress} activeOpacity={0.7}>
-                <View style={styles.buttomView}>
-                    <Cup/>
-                </View>
-            </TouchableOpacity>
+            <ButtonToCart/>
         </ImageBackground>
     )
 }
@@ -100,16 +96,5 @@ const styles = StyleSheet.create({
     menuView:{
         flexDirection: 'row',
         alignItems: 'center',
-    },
-    buttomView:{
-        alignItems: 'center',
-        backgroundColor: '#C08D78',
-        height: 70,
-        marginTop: 40,
-        marginBottom: 10,
-        borderRadius: 10,
-        paddingVertical: 10,
-        paddingBottom: 50,
-        marginHorizontal: 24,
     },
 })

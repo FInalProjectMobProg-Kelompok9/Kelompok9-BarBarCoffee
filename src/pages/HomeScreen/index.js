@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ImageBackground } from 'react-native'
 import { IconBack, Logo } from '../../assets';
 import { Button, TextInput, } from '../../components';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
     return (
         <ImageBackground source={require('../../assets/icons/haya.jpg')} style={styles.page}>
             <Logo style={styles.logo}/>
@@ -12,7 +12,7 @@ const HomeScreen = () => {
                 <Text style={styles.text2}>Coffee</Text>
             </View>
             <TextInput placeholder="Table Number"/>
-            <Button title="Menu"/>
+            <Button title="Menu" onPress={() => navigation.navigate('MenuScreen')}/>
         </ImageBackground>
     )
 }
