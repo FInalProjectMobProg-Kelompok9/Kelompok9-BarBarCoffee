@@ -1,7 +1,7 @@
 import React from 'react'
-import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native'
-import { Background, Bakpao, Cappuccino, Cup, Espresoo, IconBack, KopiHitam, Logo, Mochaccino } from '../../assets';
-import { ArrowRiht, ButtonToCart, Gap, Menu } from '../../components'
+import {StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native'
+import {Bakpao, Cappuccino, Espresoo, KopiHitam, Mochaccino } from '../../assets';
+import { ArrowRight, ButtonToCart, Gap, Menu } from '../../components'
 
 const MenuScreen = ({navigation}) => {
     return (
@@ -20,15 +20,15 @@ const MenuScreen = ({navigation}) => {
                         <Gap width={25}/>
                         <Menu title = "Espresoo"/>
                         <Gap width={91}/>
-                        <ArrowRiht onPress={() => navigation.navigate('OrderScreen2')}/>
+                        <ArrowRight onPress={() => navigation.navigate('OrderScreen2')}/>
                     </View>
                     <Gap height={29}/>
                     <View style={styles.menuView}>
                         <Cappuccino/>
                         <Gap width={25}/>
-                        <Menu title = "Capucciono"/>
+                        <Menu title = "Capuccino"/>
                         <Gap width={58}/>
-                        <ArrowRiht onPress={() => navigation.navigate('OrderScreen3')}/>
+                        <ArrowRight onPress={() => navigation.navigate('OrderScreen3')}/>
                     </View>
                     <Gap height={29}/>
                     <View style={styles.menuView}>
@@ -36,7 +36,7 @@ const MenuScreen = ({navigation}) => {
                         <Gap width={55}/>
                         <Menu title = "Kopi Hitam"/>
                         <Gap width={66}/>
-                        <ArrowRiht onPress={() => navigation.navigate('OrderScreen')}/>
+                        <ArrowRight onPress={() => navigation.navigate('OrderScreen')}/>
                     </View>
                     <Gap height={29}/>
                     <View style={styles.menuView}>
@@ -44,7 +44,7 @@ const MenuScreen = ({navigation}) => {
                         <Gap width={57}/>
                         <Menu title = "Mochaccino"/>
                         <Gap width={49}/>
-                        <ArrowRiht onPress={() => navigation.navigate('OrderScreen4')}/>
+                        <ArrowRight onPress={() => navigation.navigate('OrderScreen4')}/>
                     </View>
                     <Gap height={29}/>
                     <View style={styles.menuView}>
@@ -52,7 +52,7 @@ const MenuScreen = ({navigation}) => {
                         <Gap width={23}/>
                         <Menu title = "Bakpao"/>
                         <Gap width={104}/>
-                        <ArrowRiht onPress={() => navigation.navigate('OrderScreen5')}/>
+                        <ArrowRight onPress={() => navigation.navigate('OrderScreen5')}/>
                     </View>
                 </View>
             </ScrollView>

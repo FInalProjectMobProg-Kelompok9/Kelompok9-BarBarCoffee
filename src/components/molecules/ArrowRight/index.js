@@ -1,8 +1,8 @@
 import React from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import {IconBack} from '../../../assets'
 
-const ArrowRiht = ({onPress}) => {
+const ArrowRight = ({onPress}) => {
     return (
         <TouchableOpacity onPress={onPress}>
         <View style={styles.lefticonBack}>
@@ -12,7 +12,7 @@ const ArrowRiht = ({onPress}) => {
     )
 }
 
-export default ArrowRiht
+export default ArrowRight
 
 const styles = StyleSheet.create({
     lefticonBack:{
