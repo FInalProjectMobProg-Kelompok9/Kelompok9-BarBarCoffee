@@ -72,7 +72,7 @@ const OrderScreen4 = ({navigation}) => {
                <ThreeCubes/>
             </View>
             <Gap height={28}/>
-            <ButtonAdd/>
+            <ButtonAdd title="Add to Chart" onPress={() => navigation.navigate('ChartScreen')}/>
         </View>
         </View>
         </ScrollView>

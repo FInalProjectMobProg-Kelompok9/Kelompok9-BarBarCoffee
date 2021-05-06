@@ -1,12 +1,11 @@
 import React from 'react'
 import { ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-native'
 import {KopiHitam, IconMin, IconPlus, Circle, PoinCircle, CupNo, CupYes, NoCubes, OneCubes, TwoCubes, ThreeCubes} from '../../assets';
-import {ButtonAdd, ArrowLeft, Gap} from '../../components';
+import {ButtonAdd, ArrowLeft, Gap, Arrowrik} from '../../components';
 
 
 const OrderScreen = ({navigation}) => {
     return (
-
         <ImageBackground source={require('../../assets/icons/haya.jpg')} style={styles.page}>
         <ScrollView>
         <View>
@@ -72,7 +71,7 @@ const OrderScreen = ({navigation}) => {
                <ThreeCubes/>
             </View>
             <Gap height={28}/>
-            <ButtonAdd/>
+            <ButtonAdd title="Add to Chart" onPress={() => navigation.navigate('ChartScreen')}/>
         </View>
         </View>
         </ScrollView>

@@ -53,7 +53,7 @@ const OrderScreen5 = ({navigation}) => {
                 <Text style={styles.hot}>Unti</Text>
             </View>
             <Gap height={150}/>
-            <ButtonAdd/>
+            <ButtonAdd title="Add to Chart" onPress={() => navigation.navigate('ChartScreen')}/>
         </View>
         </View>
         </ScrollView>

@@ -9,10 +9,9 @@ const ChartScreen = ({navigation}) => {
         <ImageBackground source={require('../../assets/icons/haya.jpg')} style={styles.page}>
         <ScrollView>
         <View style={styles.fullPage}>
-
         <View>
             <Gap height={16}/>
-            <ArrowLeft/>
+            <ArrowLeft onPress={() => navigation.navigate('MenuScreen')}/>
             <Gap height={16}/>
             <View style={styles.mainTittle}>
                 <Text style={styles.title}>Your </Text>

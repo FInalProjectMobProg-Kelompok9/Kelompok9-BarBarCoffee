@@ -5,7 +5,7 @@ const ButtonAdd = ({title, onPress}) => {
     return (
         <TouchableOpacity onPress={onPress} activeOpacity={0.7}>
             <View style={styles.Button}>
-                <Text style={styles.text4}>{title}</Text>
+                <Text style={styles.text}>{title}</Text>
             </View>
         </TouchableOpacity>
     )
@@ -22,8 +22,8 @@ const styles = StyleSheet.create({
         borderRadius:16,
         marginHorizontal:100,
     },
-    text4:{
-       fontSize:24,
+    text:{
+       fontSize:20,
        color:'white',
     }
 })
