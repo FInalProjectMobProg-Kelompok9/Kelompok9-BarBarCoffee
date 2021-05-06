@@ -1,4 +1,4 @@
 import ArrowLeft from './ArrowLeft';
-import ArrowRight from './ArrowRight';
+import ArrowRiht from './ArrowRight';
 
-export {ArrowLeft, ArrowRight};
+export {ArrowLeft, ArrowRiht};
