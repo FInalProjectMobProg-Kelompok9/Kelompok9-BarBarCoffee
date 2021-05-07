@@ -19,6 +19,6 @@ const styles = StyleSheet.create({
         width: 193,
         height: 43,
         marginTop: 83,
-        textAlign: 'center'
+        textAlign: 'center',
     }
 })

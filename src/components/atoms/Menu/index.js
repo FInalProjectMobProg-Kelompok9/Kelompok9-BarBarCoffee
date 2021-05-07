@@ -1,6 +1,5 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import { Logo, IconBack, Espresoo} from '../../../assets'
 
 const Menu = ({title}) => {
     return (

@@ -1,6 +1,6 @@
 import React from 'react'
-import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native'
-import { Background, Bakpao, Cappuccino, Cup, Espresoo, IconBack, KopiHitam, Logo, Mochaccino } from '../../assets';
+import {StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native'
+import {Bakpao, Cappuccino, Espresoo, KopiHitam, Mochaccino } from '../../assets';
 import { ArrowRight, ButtonToCart, Gap, Menu } from '../../components'
 
 const MenuScreen = ({navigation}) => {
@@ -26,7 +26,7 @@ const MenuScreen = ({navigation}) => {
                     <View style={styles.menuView}>
                         <Cappuccino/>
                         <Gap width={25}/>
-                        <Menu title = "Capucciono"/>
+                        <Menu title = "Capuccino"/>
                         <Gap width={58}/>
                         <ArrowRight onPress={() => navigation.navigate('OrderScreen3')}/>
                     </View>

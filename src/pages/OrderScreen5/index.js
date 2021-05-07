@@ -1,7 +1,7 @@
 import React from 'react'
-import { ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-native'
-import {KopiHitam, IconMin, IconPlus, Circle, PoinCircle, CupNo, CupYes, NoCubes, OneCubes, TwoCubes, ThreeCubes, Mochaccino, Espresoo, Cappuccino, Bakpao} from '../../assets';
-import {ButtonAdd, ArrowLeft, Gap} from '../../components';
+import {ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-native'
+import {Bakpao} from '../../assets';
+import {ButtonAdd, ArrowLeft, Gap, AddAndDropCounter, AddHotCold} from '../../components';
 
 
 const OrderScreen5 = ({navigation}) => {
@@ -22,12 +22,8 @@ const OrderScreen5 = ({navigation}) => {
             <Gap height={40}/>
             <View style={styles.totalCup}>
                 <Text style={styles.textSubtittle}>Bakpao</Text>
-                <Gap width={110}/>
-                <IconPlus marginTop={8}/>
-                <Gap width={12}/>
-                <Text style={styles.counter}>1</Text>
-                <Gap width={12}/>
-                <IconMin/>
+                <Gap width={155}/>
+                <AddAndDropCounter/>
             </View>
             <Gap height={5}/>
             <View style={styles.textHarga}>
@@ -35,23 +31,11 @@ const OrderScreen5 = ({navigation}) => {
                 <Text style={styles.textMoney}>6.000</Text>
             </View>
             <Gap height={42}/>
-            <View style={styles.hotCold}>
-            <PoinCircle/>
-            <Gap width={20}/>
-                <Text style={styles.hot}>Kacang</Text>
-            </View>
+            <AddHotCold title="Kacang"/>
             <Gap height={10}/>
-            <View style={styles.hotCold}>
-                <Circle/>
-                <Gap width={20}/>
-                <Text style={styles.hot}>Temo</Text>
-            </View>
+            <AddHotCold title="Temo"/>
             <Gap height={10}/>
-            <View style={styles.hotCold}>
-                <Circle/>
-                <Gap width={20}/>
-                <Text style={styles.hot}>Unti</Text>
-            </View>
+            <AddHotCold title="Unti"/>
             <Gap height={150}/>
             <ButtonAdd title="Add to Chart" onPress={() => navigation.navigate('ChartScreen')}/>
         </View>
@@ -83,9 +67,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     textSubtittle:{
-        fontSize:28,
-    },
-    counter:{
         fontSize:28,
     },
     textRp:{

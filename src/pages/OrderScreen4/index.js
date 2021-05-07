@@ -1,7 +1,7 @@
 import React from 'react'
-import { ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-native'
-import {KopiHitam, IconMin, IconPlus, Circle, PoinCircle, CupNo, CupYes, NoCubes, OneCubes, TwoCubes, ThreeCubes, Mochaccino} from '../../assets';
-import {ButtonAdd, ArrowLeft, Gap} from '../../components';
+import {ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-native'
+import {Mochaccino} from '../../assets';
+import {ButtonAdd, ArrowLeft, Gap, AddAndDropCounter, AddHotCold, AddSize, AddSugarLevel} from '../../components';
 
 
 const OrderScreen4 = ({navigation}) => {
@@ -22,12 +22,8 @@ const OrderScreen4 = ({navigation}) => {
             <Gap height={40}/>
             <View style={styles.totalCup}>
                 <Text style={styles.textSubtittle}>Mochaccino</Text>
-                <Gap width={110}/>
-                <IconPlus marginTop={8}/>
-                <Gap width={12}/>
-                <Text style={styles.counter}>1</Text>
-                <Gap width={12}/>
-                <IconMin/>
+                <Gap width={100}/>
+                <AddAndDropCounter/>
             </View>
             <Gap height={5}/>
             <View style={styles.textHarga}>
@@ -35,42 +31,22 @@ const OrderScreen4 = ({navigation}) => {
                 <Text style={styles.textMoney}>13.000</Text>
             </View>
             <Gap height={42}/>
-            <View style={styles.hotCold}>
-            <PoinCircle/>
-            <Gap width={20}/>
-                <Text style={styles.hot}>Hot</Text>
-            </View>
+            <AddHotCold title="Hot"/>
             <Gap height={10}/>
-            <View style={styles.hotCold}>
-                <Circle/>
-                <Gap width={20}/>
-                <Text style={styles.hot}>Cold</Text>
-            </View>
+            <AddHotCold title="Cold"/>
             <Gap height={33}/>
             <View>
                 <Text style={styles.ziseTittle}>Size</Text>
             </View>
             <Gap height={5}/>
-            <View style={styles.size}>
-                <CupYes marginTop={14}/>
-            <Gap width={22}/>
-                <CupNo/>
-            </View>
+            <AddSize/>
             <Gap height={45}/>
             <View style={styles.sugarRate}>
                 <Text style={styles.sugar}>Sugar</Text>
-                <Text style={styles.hot}> (In Cubes)</Text>
+                <Text style={styles.inCubes}> (In Cubes)</Text>
             </View>
             <Gap height={5}/>
-            <View style={styles.cubes}>
-               <NoCubes marginTop={18}/>
-               <Gap width={25}/>
-               <OneCubes marginTop={23}/>
-               <Gap width={25}/>
-               <TwoCubes marginTop={22}/>
-               <Gap width={25}/>
-               <ThreeCubes/>
-            </View>
+            <AddSugarLevel/>
             <Gap height={28}/>
             <ButtonAdd title="Add to Chart" onPress={() => navigation.navigate('ChartScreen')}/>
         </View>
@@ -104,9 +80,6 @@ const styles = StyleSheet.create({
     textSubtittle:{
         fontSize:28,
     },
-    counter:{
-        fontSize:28,
-    },
     textRp:{
         width:30,
         height:29,
@@ -126,31 +99,20 @@ const styles = StyleSheet.create({
     totalCup:{
         flexDirection:'row',
         alignItems:'center',
-
-    },
-    hot:{
-       
-        color:'#C08D78',
-        fontSize:24,
-    },
-    hotCold:{
-        flexDirection:'row',
     },
     ziseTittle:{
         fontSize:24,
         fontWeight:'400',
     },
-    size:{
-        flexDirection:'row',
-    },
     sugar:{
         color:'#000000',
         fontSize:24,
     },
-    sugarRate:{
-        flexDirection:'row',
+    inCubes:{
+        color:'#C08D78',
+        fontSize:24,
     },
-    cubes:{
+    sugarRate:{
         flexDirection:'row',
     },
     
