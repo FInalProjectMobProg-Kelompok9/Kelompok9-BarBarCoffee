@@ -1,23 +1,22 @@
-import React from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import {IconBackLeft} from '../../../assets'
+import React from 'react';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
+import {IconBackLeft} from '../../../assets';
 
 const ArrowLeft = ({onPress}) => {
-    return (
-        <TouchableOpacity onPress={onPress}>
-        <View style={styles.lefticonBack}>
-            <IconBackLeft/>
-        </View>
-        </TouchableOpacity>
-    )
-}
+  return (
+    <TouchableOpacity onPress={onPress}>
+      <View style={styles.lefticonBack}>
+        <IconBackLeft />
+      </View>
+    </TouchableOpacity>
+  );
+};
 
-export default ArrowLeft
+export default ArrowLeft;
 
 const styles = StyleSheet.create({
-    lefticonBack:{
-        width:50,
-        height:50,
-    },
-    
-})
+  lefticonBack: {
+    width: 50,
+    height: 50,
+  },
+});

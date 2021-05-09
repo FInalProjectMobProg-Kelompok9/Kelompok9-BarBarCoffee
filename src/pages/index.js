@@ -12,13 +12,22 @@ import ChartScreen3 from './ChartScreen3';
 import ChartScreen4 from './ChartScreen4';
 import ChartScreen5 from './ChartScreen5';
 import EndScreen from './EndScreen';
+import FullChartScreen from './FullChartScreen';
 
-
-export { SplashScreen, HomeScreen, MenuScreen, OrderScreen, OrderScreen2, OrderScreen3, OrderScreen4, OrderScreen5, ChartScreen, ChartScreen2, ChartScreen3, ChartScreen4,ChartScreen5, EndScreen,};
-
-
-
-
-
-
-
+export {
+  SplashScreen,
+  HomeScreen,
+  MenuScreen,
+  OrderScreen,
+  OrderScreen2,
+  OrderScreen3,
+  OrderScreen4,
+  OrderScreen5,
+  ChartScreen,
+  ChartScreen2,
+  ChartScreen3,
+  ChartScreen4,
+  ChartScreen5,
+  EndScreen,
+  FullChartScreen,
+};

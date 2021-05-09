@@ -9,7 +9,7 @@ const AddAndDropCounter = () => {
     <View style={styles.viewCounter}>
       <View style={styles.viewIcon}>
         <TouchableOpacity>
-          <FontAwesomeIcon icon={faMinus} size={15}/>
+          <FontAwesomeIcon icon={faMinus} size={15} />
         </TouchableOpacity>
       </View>
       <Gap width={12} />
@@ -17,7 +17,7 @@ const AddAndDropCounter = () => {
       <Gap width={12} />
       <View style={styles.viewIcon}>
         <TouchableOpacity>
-          <FontAwesomeIcon icon={faPlus} size={15}/>
+          <FontAwesomeIcon icon={faPlus} size={15} />
         </TouchableOpacity>
       </View>
     </View>
@@ -36,13 +36,13 @@ const styles = StyleSheet.create({
     right: 0,
     alignItems: 'center',
   },
-  viewIcon:{
-      alignItems: 'center',
-      justifyContent: 'center',
-      borderWidth: 1,
-      width: 30,
-      height: 30,
-      borderRadius: 30,
-      backgroundColor: '#CF9775'
-  }
+  viewIcon: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    width: 30,
+    height: 30,
+    borderRadius: 30,
+    backgroundColor: '#CF9775',
+  },
 });

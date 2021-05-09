@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-const TextSize = ({title}) => {
+const TextSize = () => {
     return (
         <View>
             <Text style={styles.text}>Size</Text>

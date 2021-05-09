@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native'
-import {KopiHitam} from '../../assets';
+import {Bakpao, Cappuccino, Espresoo, KopiHitam, Mochaccino} from '../../assets';
 import { ArrowLeft, ButtonAdd, Gap } from '../../components';
 
 const ChartScreen = ({navigation}) => {
@@ -12,22 +12,61 @@ const ChartScreen = ({navigation}) => {
         <View>
             <Gap height={16}/>
             <ArrowLeft onPress={() => navigation.navigate('MenuScreen')}/>
-            <Gap height={16}/>
             <View style={styles.mainTittle}>
                 <Text style={styles.title}>Your </Text>
                 <Text style={styles.titleCart}>Cart</Text>
             </View>
-            <Gap height={50}/>
+            <Gap height={30}/>
             <View style={styles.viewSubtittle}>
                 <View style={styles.Count}>
                     <Text>1</Text>
                 </View>
-            <Gap width={36}/>
-                <KopiHitam/>
-                <Gap width={43}/>
-                <Text style={styles.subTittle}>Kopi Hitam</Text>
+                <Gap width={36}/>
+                <Espresoo/>
+                <Gap width={36}/>
+                <Text style={styles.subTittle}>Espresso</Text>
             </View>
-            <Gap height={50}/>
+            <Gap height={10}/>
+            <View style={styles.viewSubtittle}>
+                <View style={styles.Count}>
+                    <Text>1</Text>
+                </View>
+                <Gap width={36}/>
+                <Cappuccino/>
+                <Gap width={36}/>
+                <Text style={styles.subTittle}>Cappuccino</Text>
+            </View>
+            <Gap height={20}/>
+            <View style={styles.viewSubtittle}>
+                <View style={styles.Count}>
+                    <Text>1</Text>
+                </View>
+                <Gap width={45}/>
+                <KopiHitam/>
+                <Gap width={55}/>
+                <Text style={styles.subTittle}>KopiHitam</Text>
+            </View>
+            <Gap height={35}/>
+            <View style={styles.viewSubtittle}>
+                <View style={styles.Count}>
+                    <Text>1</Text>
+                </View>
+                <Gap width={50}/>
+                <Mochaccino/>
+                <Gap width={50}/>
+                <Text style={styles.subTittle}>Mochaccino</Text>
+            </View>
+            <Gap height={10}/>
+            <View style={styles.viewSubtittle}>
+                <View style={styles.Count}>
+                    <Text>1</Text>
+                </View>
+                <Gap width={30}/>
+                <Bakpao/>
+                <Gap width={31}/>
+                <Text style={styles.subTittle}>Bakpao</Text>
+            </View>
+            <Gap height={33}/>
             <View>
             <View
                 style={{
@@ -39,21 +78,21 @@ const ChartScreen = ({navigation}) => {
                 <Text style={styles.total}>Cart Total </Text>
                 <Gap width={137}/>
                 <Text style={styles.rp}>Rp</Text>
-                <Text style={styles.money}>10.000</Text>
+                <Text style={styles.money}> 57.000</Text>
             </View>
             <Gap height={33}/>
             <View style={styles.tax}>
                 <Text style={styles.total}>Tax</Text>
                 <Gap width={211}/>
                 <Text style={styles.rp}>Rp</Text>
-                <Text style={styles.taxMoney}>1.000</Text>    
+                <Text style={styles.taxMoney}> 5.700</Text>    
             </View>
             <Gap height={33}/>
             <View style={styles.discount}>
                 <Text style={styles.total}>Discount</Text>
                 <Gap width={154}/>
                 <Text style={styles.rp}>Rp</Text>
-                <Text style={styles.discountMoney}>-0</Text>    
+                <Text style={styles.discountMoney}> -</Text>    
             </View>
             <Gap height={73}/>
             <View>
@@ -67,7 +106,7 @@ const ChartScreen = ({navigation}) => {
                 <Text style={styles.total}>Subtotal</Text>
                 <Gap width={162}/>
                 <Text style={styles.rp}>Rp</Text>
-                <Text style={styles.subTotalValue}>11.000</Text>    
+                <Text style={styles.subTotalValue}> 62.700</Text>    
             </View>
             <Gap height={33}/>
             <ButtonAdd title="Order" onPress={() => navigation.navigate('EndScreen')}/>
@@ -102,7 +141,7 @@ const styles = StyleSheet.create({
     viewSubtittle:{
         flexDirection:'row',
         alignItems:'center',
-
+        marginVertical: -50
     },
     Count:{
         borderWidth: 1,
