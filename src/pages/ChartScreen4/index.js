@@ -3,8 +3,9 @@ import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-nativ
 import {KopiHitam} from '../../assets';
 import { ArrowLeft, ButtonAdd, Gap } from '../../components';
 
-const ChartScreen = ({navigation}) => {
+const ChartScreen4 = ({navigation}) => {
     return (
+
         <ImageBackground source={require('../../assets/icons/haya.jpg')} style={styles.page}>
         <ScrollView>
         <View style={styles.fullPage}>
@@ -25,7 +26,7 @@ const ChartScreen = ({navigation}) => {
             <Gap width={36}/>
                 <KopiHitam/>
                 <Gap width={43}/>
-                <Text style={styles.subTittle}>Kopi Hitam</Text>
+                <Text style={styles.subTittle}>Mochaccino</Text>
             </View>
             <Gap height={50}/>
             <View>
@@ -39,14 +40,14 @@ const ChartScreen = ({navigation}) => {
                 <Text style={styles.total}>Cart Total </Text>
                 <Gap width={137}/>
                 <Text style={styles.rp}>Rp</Text>
-                <Text style={styles.money}>10.000</Text>
+                <Text style={styles.money}>13.000</Text>
             </View>
             <Gap height={33}/>
             <View style={styles.tax}>
                 <Text style={styles.total}>Tax</Text>
                 <Gap width={211}/>
                 <Text style={styles.rp}>Rp</Text>
-                <Text style={styles.taxMoney}>1.000</Text>    
+                <Text style={styles.taxMoney}>1.300</Text>    
             </View>
             <Gap height={33}/>
             <View style={styles.discount}>
@@ -67,10 +68,10 @@ const ChartScreen = ({navigation}) => {
                 <Text style={styles.total}>Subtotal</Text>
                 <Gap width={162}/>
                 <Text style={styles.rp}>Rp</Text>
-                <Text style={styles.subTotalValue}>11.000</Text>    
+                <Text style={styles.subTotalValue}>12.300</Text>    
             </View>
             <Gap height={33}/>
-            <ButtonAdd title="Order" onPress={navigation.replace('EndScreen')}/>
+            <ButtonAdd title="Order" onPress={navigation.navigate('ChartScreen')}/>
             <Gap height={10}/>
         </View> 
         </View>
@@ -79,7 +80,7 @@ const ChartScreen = ({navigation}) => {
     )
 }
 
-export default ChartScreen
+export default ChartScreen4
 
 const styles = StyleSheet.create({
     page:{

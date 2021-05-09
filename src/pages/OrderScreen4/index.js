@@ -1,10 +1,29 @@
 import React from 'react'
 import {ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-native'
 import {Mochaccino} from '../../assets';
-import {ButtonAdd, ArrowLeft, Gap, AddAndDropCounter, AddHotCold, AddSize, AddSugarLevel} from '../../components';
-
+import {ButtonAdd, ArrowLeft, Gap, AddAndDropCounter, AddHotCold, AddSize, AddSugarLevel, TextMenu, TextHarga, TextSize, TextSugar} from '../../components';
+import firebase from '../../config/Firebase';
 
 const OrderScreen4 = ({navigation}) => {
+    const data = {
+        items: 'Mochaccino',
+        harga: 13000,
+    }
+
+    const pushDataItems = () => {
+        const pushItems = firebase.database()
+        .ref('Items')
+        const dataItems = data
+
+        pushItems.push(dataItems)
+    }
+    const onSubmit = () => {
+        pushDataItems()
+        navigation.navigate('ChartScreen4', {
+            dataItems: data,
+        })
+    }
+
     return (
 
         <ImageBackground source={require('../../assets/icons/haya.jpg')} style={styles.page}>
@@ -12,43 +31,36 @@ const OrderScreen4 = ({navigation}) => {
         <View>
         <View style={styles.fullPage}>
             <ArrowLeft onPress={() => navigation.navigate('MenuScreen')}/>
-            <View style={styles.viewTextKopiHitam}>
-                <Text style={styles.textTittle}>Mochaccino</Text>
+            <View alignItems='center'>
+                <TextMenu title="Mochaccino"/>
             </View>
             <Gap height={40}/>
-            <View style={styles.kopiHitam}>
+            <View style={styles.mochaccino}>
                 <Mochaccino/>
             </View>
             <Gap height={40}/>
             <View style={styles.totalCup}>
-                <Text style={styles.textSubtittle}>Mochaccino</Text>
-                <Gap width={100}/>
+                <TextMenu title="Mochaccino"/>
                 <AddAndDropCounter/>
             </View>
             <Gap height={5}/>
-            <View style={styles.textHarga}>
-                <Text style={styles.textRp}>Rp</Text>
-                <Text style={styles.textMoney}>13.000</Text>
-            </View>
+            <TextHarga title="13.000"/>
             <Gap height={42}/>
             <AddHotCold title="Hot"/>
             <Gap height={10}/>
             <AddHotCold title="Cold"/>
             <Gap height={33}/>
             <View>
-                <Text style={styles.ziseTittle}>Size</Text>
+                <TextSize/>
             </View>
             <Gap height={5}/>
             <AddSize/>
             <Gap height={45}/>
-            <View style={styles.sugarRate}>
-                <Text style={styles.sugar}>Sugar</Text>
-                <Text style={styles.inCubes}> (In Cubes)</Text>
-            </View>
+            <TextSugar/>
             <Gap height={5}/>
             <AddSugarLevel/>
             <Gap height={28}/>
-            <ButtonAdd title="Add to Chart" onPress={() => navigation.navigate('ChartScreen')}/>
+            <ButtonAdd title="Add to Chart" onPress={onSubmit}/>
         </View>
         </View>
         </ScrollView>
@@ -67,53 +79,11 @@ const styles = StyleSheet.create({
         marginTop:24,
         marginBottom:15,
     },
-    viewTextKopiHitam:{
-        alignItems:'center',
-    },
-    textTittle:{
-        textAlign:'center',
-        fontSize:28,
-    },
-    kopiHitam:{
+    mochaccino:{
         alignItems: 'center',
-    },
-    textSubtittle:{
-        fontSize:28,
-    },
-    textRp:{
-        width:30,
-        height:29,
-        fontWeight: '400',
-        fontSize:24,
-        color:'#C08D78',
-    },
-    textMoney:{
-        fontWeight:'400',
-        fontSize:24,
-        textAlignVertical:'bottom',
-    },
-    textHarga:{
-        flexDirection:'row',
-        height:50,
     },
     totalCup:{
         flexDirection:'row',
         alignItems:'center',
     },
-    ziseTittle:{
-        fontSize:24,
-        fontWeight:'400',
-    },
-    sugar:{
-        color:'#000000',
-        fontSize:24,
-    },
-    inCubes:{
-        color:'#C08D78',
-        fontSize:24,
-    },
-    sugarRate:{
-        flexDirection:'row',
-    },
-    
 })

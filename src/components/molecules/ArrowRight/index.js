@@ -4,11 +4,13 @@ import {IconBack} from '../../../assets'
 
 const ArrowRight = ({onPress}) => {
     return (
-        <TouchableOpacity onPress={onPress}>
-        <View style={styles.lefticonBack}>
-            <IconBack/>
+        <View style={styles.viewArrow}>
+            <TouchableOpacity onPress={onPress}>
+                <View style={styles.lefticonBack}>
+                    <IconBack/>
+                </View>
+            </TouchableOpacity>
         </View>
-        </TouchableOpacity>
     )
 }
 
@@ -18,8 +20,11 @@ const styles = StyleSheet.create({
     lefticonBack:{
         width:50,
         height:50,
-        justifyContent: 'space-around',
-        alignItems: 'center'
+        justifyContent: 'center',
+        alignItems: 'center',
     },
+    viewArrow:{
+        justifyContent: 'center'
+    }
     
 })

@@ -1,9 +1,40 @@
-import React from 'react'
-import { View, Text, StyleSheet, ImageBackground } from 'react-native'
+import React, {useState} from 'react'
+import { View, Text, StyleSheet, ImageBackground, Alert } from 'react-native'
 import { IconBack, Logo } from '../../assets';
 import { Button, TextInput, } from '../../components';
+import firebase from '../../config/Firebase';
+import {showMessage} from 'react-native-flash-message';
 
 const HomeScreen = ({navigation}) => {
+    const [tableNumber, setTableNumber] = useState('')
+
+    const pushTableNumber = () =>{
+        const data ={
+            tableNumber: tableNumber
+        };
+        if (tableNumber === '') {
+            showMessage({
+              message: 'Please add the table number',
+              type: 'default',
+              backgroundColor: '#D9435E', 
+              color: 'white', 
+            });
+        }
+        else {
+            const pushData = firebase.database().ref('tableNumber');
+            const tableNumber = data
+
+            pushData
+                .push(tableNumber);
+                setTableNumber('')
+                navigation.navigate('MenuScreen');
+                Alert.alert('BarBarCoffee', 'Silahkan Memesan')
+        }
+    }
+
+    const onSubmit = () => {
+        pushTableNumber()
+    }
     return (
         <ImageBackground source={require('../../assets/icons/haya.jpg')} style={styles.page}>
             <Logo style={styles.logo}/>
@@ -11,13 +42,11 @@ const HomeScreen = ({navigation}) => {
                 <Text style={styles.text1}>BarBar </Text>
                 <Text style={styles.text2}>Coffee</Text>
             </View>
-            <TextInput placeholder="Table Number"/>
-            <Button title="Menu" onPress={() => navigation.navigate('MenuScreen')}/>
+            <TextInput placeholder="Table Number" keyboardType={'number-pad'} value={tableNumber} onChangeText={value => setTableNumber(value)}/>
+            <Button title="Menu" onPress={onSubmit}/>
         </ImageBackground>
     )
 }
-
-export default HomeScreen
 
 const styles = StyleSheet.create({
     page: {
@@ -41,4 +70,6 @@ const styles = StyleSheet.create({
     logo:{
         marginTop: 134,
     },
-});
+})
+
+export default HomeScreen;

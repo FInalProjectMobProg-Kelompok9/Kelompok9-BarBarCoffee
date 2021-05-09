@@ -27,7 +27,7 @@ const MenuScreen = ({navigation}) => {
                         <Cappuccino/>
                         <Gap width={25}/>
                         <Menu title = "Capuccino"/>
-                        <Gap width={58}/>
+                        <Gap width={73}/>
                         <ArrowRight onPress={() => navigation.navigate('OrderScreen3')}/>
                     </View>
                     <Gap height={29}/>
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     fullPage:{
-        marginLeft: 24,
+        marginHorizontal: 24,
     },
     text1:{
         fontWeight: '700',
@@ -95,6 +95,5 @@ const styles = StyleSheet.create({
     },
     menuView:{
         flexDirection: 'row',
-        alignItems: 'center',
     },
 })
